@@ -1,38 +1,100 @@
-.App {
-  text-align: center;
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body{
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: rgb(186, 246, 246);
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.jobs-center{
+  width: 80vw;
+  margin: 0 auto;
+  max-width: 1170px;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.btn-container{
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-direction: row;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin-bottom: 4rem;
+  flex-wrap: wrap;
 }
-
-.App-link {
-  color: #61dafb;
+.btn-container .job-btn {
+  background: transparent;
+  border-color: transparent;
+  text-transform: capitalize;
+  font-size: 1.25rem;
+  letter-spacing: 0.1rem;
+  margin: 0 0.5rem;
+  transition: all 0.3s linear;
+  cursor: pointer;
+  padding: 0.25rem 0;
+  line-height: 1;
+  outline-color: #fff;
+  margin-top: 3rem;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.btn-container .active-btn {
+  color: red;
+  box-shadow: 0 2px blue;
+}
+.title{
+  color: #1b1818;
+  font-weight: 400;
+  font-size: 20px;
+}
+.company{
+  display: inline-block;
+  background-color: rgb(236, 236, 236);
+  text-transform: uppercase;
+  padding:3px 10px;
+  color: rgb(159, 157, 157);
+  margin: 10px 0px;
+}
+.job-date {
+  letter-spacing: 0.1rem;
+  margin: 0.8rem 0rem;
+}
+.job-desc {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  column-gap: 2rem;
+  align-items: center;
+  margin-bottom: 1.25rem;
+}
+.job-desc p {
+  margin-bottom: 0;
+  color: grey;
+}
+.job-icon {
+  color: rgb(27, 138, 174);
+}
+@media screen and (min-width:900px) {
+  .jobs-center{
+    width: 90vw;
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    grid-gap: 4rem;
+    place-items: center;
+    height: 100vh;
+    overflow: hidden;
   }
-  to {
-    transform: rotate(360deg);
+  .title{
+    color: #1b1818;
+    font-weight: 300;
+    font-size: 40px;
+  }
+  .btn-container {
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  .job-btn  {
+    margin-bottom: 1rem;
+  }
+  .btn-container .active-btn{
+    box-shadow: 2px 0 blue;
+   
+  }
+  .job-btn:hover {
+    box-shadow: 2px 0 blue;
   }
 }
